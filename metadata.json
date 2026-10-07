@@ -1,0 +1,6 @@
+{
+  "name": "Forge Your Sword",
+  "description": "Dark fantasy blacksmith weapon upgrade gambling game. Forge your blade from +0 to +20, balance risk and reward, protect with charms, and cash out for gold.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

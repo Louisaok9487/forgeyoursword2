@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0c0a09;
+    color: #f5f5f4;
+  }
+
+  h1, h2, h3, .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes colorCycle {
+  0% {
+    filter: drop-shadow(0 0 16px #22d3ee) hue-rotate(0deg);
+  }
+  50% {
+    filter: drop-shadow(0 0 24px #ec4899) hue-rotate(180deg);
+  }
+  100% {
+    filter: drop-shadow(0 0 16px #22d3ee) hue-rotate(360deg);
+  }
+}
+
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.06) translateY(-2px);
+    opacity: 1;
+  }
+}
+
+@keyframes lightningFlash {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  15%, 25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75%, 85% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes hammerSwing {
+  0% {
+    transform: rotate(-45deg) translate(-50px, -70px) scale(0.9);
+    opacity: 0;
+  }
+  30% {
+    transform: rotate(-25deg) translate(-30px, -40px) scale(1.1);
+    opacity: 1;
+  }
+  70% {
+    transform: rotate(18deg) translate(8px, 12px) scale(1.15);
+  }
+  85% {
+    transform: rotate(12deg) translate(4px, 6px) scale(1.05);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes screenShake {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(-6px, 5px) rotate(-1deg);
+  }
+  30% {
+    transform: translate(6px, -4px) rotate(1deg);
+  }
+  45% {
+    transform: translate(-4px, 3px);
+  }
+  60% {
+    transform: translate(4px, -2px);
+  }
+  75% {
+    transform: translate(-2px, 1px);
+  }
+}
+
+@keyframes screenShakeIntense {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-12px, 9px) rotate(-2deg);
+  }
+  25% {
+    transform: translate(11px, -8px) rotate(2deg);
+  }
+  40% {
+    transform: translate(-9px, 7px) rotate(-1.5deg);
+  }
+  55% {
+    transform: translate(7px, -6px) rotate(1deg);
+  }
+  70% {
+    transform: translate(-5px, 4px);
+  }
+  85% {
+    transform: translate(3px, -2px);
+  }
+}
+
+@keyframes dangerPulse {
+  0%, 100% {
+    box-shadow: inset 0 0 25px rgba(220, 38, 38, 0.25);
+  }
+  50% {
+    box-shadow: inset 0 0 50px rgba(220, 38, 38, 0.55), 0 0 30px rgba(220, 38, 38, 0.35);
+  }
+}
+
+@keyframes hotStreakGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.2), inset 0 0 20px rgba(249, 115, 22, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(249, 115, 22, 0.55), inset 0 0 35px rgba(249, 115, 22, 0.3);
+  }
+}
+
+@keyframes floatUpFade {
+  0% {
+    transform: translateY(12px) scale(0.9);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(0px) scale(1.05);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-8px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-24px) scale(0.95);
+    opacity: 0;
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 14s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spinReverse 10s linear infinite;
+}
+
+.animate-color-cycle {
+  animation: colorCycle 6s ease-in-out infinite;
+}
+
+.animate-flame-flicker {
+  animation: flameFlicker 1.8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.animate-lightning {
+  animation: lightningFlash 2.5s steps(1) infinite;
+}
+
+.animate-hammer {
+  animation: hammerSwing 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.shake-normal {
+  animation: screenShake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.shake-intense {
+  animation: screenShakeIntense 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.danger-stage-pulse {
+  animation: dangerPulse 2s ease-in-out infinite;
+}
+
+.hot-streak-stage {
+  animation: hotStreakGlow 2.2s ease-in-out infinite;
+}
+
+.animate-float-result {
+  animation: floatUpFade 2.4s ease-out forwards;
+}
